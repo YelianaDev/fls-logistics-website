@@ -1,0 +1,8 @@
+New-Item -Path ".gitignore" -ItemType File -Force
+```
+
+Ábrelo en VS Code y pega esto:
+```
+node_modules/
+package-lock.json
+assets/css/input.css
