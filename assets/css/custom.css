@@ -1,3 +1,8 @@
+/* =====================
+   FLS — custom.css
+   Yeliana DEV
+   ===================== */
+
 :root {
   --red: #FE3742;
   --navy-blue: #012355;
@@ -7,54 +12,49 @@
   --gray: #AEB5BB;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-background: var(--navy-blue);
-color: var(--white);
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+/* ── Hero fade-up animations ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.container{
-max-width:600px;
-padding:40px;
+/* ── Scroll reveal ── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-h1{
-font-size:40px;
-margin-bottom:20px;
-color:var(--red);
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-p{
-font-size:18px;
-color:var(--gray);
-margin-bottom:40px;
-line-height:1.6;
+/* ── Leaflet popup font ── */
+.leaflet-popup-content {
+  font-family: 'Barlow', sans-serif;
+  margin: 12px 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 
-/* Loader animation */
-
-.loader{
-width:60px;
-height:60px;
-border:6px solid var(--gray);
-border-top:6px solid var(--red);
-border-radius:50%;
-margin:auto;
-animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-0%{ transform:rotate(0deg);}
-100%{ transform:rotate(360deg);}
+footer {
+  margin-bottom: 0;
 }
