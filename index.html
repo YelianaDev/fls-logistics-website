@@ -5,29 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Feliz Logistics Solutions — Soluciones logísticas integrales para importación, exportación y gestión aduanal desde y hacia República Dominicana." />
   <title>Feliz Logistics Solutions | Gestores Aduanales</title>
+  <link rel="shortcut icon" href="/assets/img/LOGO.svg" type="image/x-icon">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+  <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/tailwind.css">
-
-  <!-- CAMBIO 3: Tipografía — Oswald (display) + Nunito Sans (body) -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/custom.css" />
-
+  
   <!-- CAMBIO 5: EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 
 <body class="font-body bg-white text-fls-navy m-0">
 
   <!-- ========== NAV ========== -->
   <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
-<nav class="max-w-7xl mx-auto px-6 py-[14px] flex items-center justify-between">
-      <!-- CAMBIO 2: Logo más grande — h-36 en desktop, ajuste via JS -->
-      <a href="#inicio">
+    <nav class="max-w-7xl mx-auto px-6 py-[14px] flex items-center justify-between">
+      <!-- Logo más grande -->
+        <a href="#inicio">
         <img src="assets/img/LOGO.svg" alt="Feliz Logistics Solutions"
           class="h-20 w-auto transition-all duration-300" id="nav-logo" />
       </a>
@@ -45,6 +46,7 @@
             </a>
           </li>
         </ul>
+        <!-- Redes sociales en nav -->
         <div class="flex items-center gap-3 border-l border-white border-opacity-30 pl-6">
           <a href="https://instagram.com/felizlogistics" target="_blank" class="text-white hover:text-fls-red transition-colors text-lg">
             <i class="fab fa-instagram"></i>
@@ -91,7 +93,7 @@
         <span class="text-fls-red">desde el origen</span> <br />
         hasta el destino final
       </h1>
-      <p class="text-white text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 fade-up delay-2">
+      <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 fade-up delay-2">
         Soluciones logísticas integrales para importación, exportación y gestión aduanal desde y hacia República Dominicana.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center fade-up delay-3">
@@ -104,257 +106,272 @@
       </div>
     </div>
   </section>
+<!-- ========== CONTADORES + ICONOS (bloque unificado dark) ========== -->
+<section class="bg-fls-navy relative overflow-hidden">
 
-  <!-- ========== CONTADORES + ICONOS ========== -->
-  <section class="bg-fls-red relative overflow-hidden">
-    <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+  <!-- Línea decorativa superior -->
+  <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
 
-        <div class="scroll-reveal group relative flex flex-col items-center text-center px-10 py-8 md:border-r border-white/10 cursor-default">
-          <span class="absolute top-4 left-6 font-display font-black text-8xl text-white/5 select-none">01</span>
-          <div class="relative w-16 h-16 flex items-center justify-center mb-5">
-            <div class="absolute inset-0 border border-fls-red/40 group-hover:border-fls-red group-hover:bg-fls-red/10 transition-all duration-300"></div>
-            <i class="fas fa-ship text-fls-red text-2xl relative z-10"></i>
-          </div>
-          <h3 class="font-display font-bold text-white text-xl uppercase tracking-widest mb-3">Marítimo</h3>
-          <div class="w-8 h-px bg-fls-red mb-4 group-hover:w-16 transition-all duration-300"></div>
-          <p class="text-white text-sm leading-relaxed">Importación y exportación vía marítima. Carga FCL/LCL, consolidación y más.</p>
+  <!-- ICONOS MAR / AIRE / TIERRA -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+
+      <!-- Marítimo -->
+      <div class="scroll-reveal group relative flex flex-col items-center text-center px-10 py-8 md:border-r border-white/10 cursor-default">
+        <!-- Número decorativo de fondo -->
+        <span class="absolute top-4 left-6 font-display font-black text-8xl text-white/5 select-none">01</span>
+        <!-- Icono -->
+        <div class="relative w-16 h-16 flex items-center justify-center mb-5">
+          <div class="absolute inset-0 border border-fls-red/40 group-hover:border-fls-red group-hover:bg-fls-red/10 transition-all duration-300"></div>
+          <i class="fas fa-ship text-fls-red text-2xl relative z-10"></i>
         </div>
-
-        <div class="scroll-reveal group relative flex flex-col items-center text-center px-10 py-8 md:border-r border-white/10 cursor-default">
-          <span class="absolute top-4 left-6 font-display font-black text-8xl text-white/5 select-none">02</span>
-          <div class="relative w-16 h-16 flex items-center justify-center mb-5">
-            <div class="absolute inset-0 border border-fls-red/40 group-hover:border-fls-red group-hover:bg-fls-red/10 transition-all duration-300"></div>
-            <i class="fas fa-plane text-fls-red text-2xl relative z-10"></i>
-          </div>
-          <h3 class="font-display font-bold text-white text-xl uppercase tracking-widest mb-3">Aéreo</h3>
-          <div class="w-8 h-px bg-fls-red mb-4 group-hover:w-16 transition-all duration-300"></div>
-          <p class="text-white text-sm leading-relaxed">Flete aéreo, charters y servicio puerta a puerta para tu carga internacional.</p>
-        </div>
-
-        <div class="scroll-reveal group relative flex flex-col items-center text-center px-10 py-8 cursor-default">
-          <span class="absolute top-4 left-6 font-display font-black text-8xl text-white/5 select-none">03</span>
-          <div class="relative w-16 h-16 flex items-center justify-center mb-5">
-            <div class="absolute inset-0 border border-fls-red/40 group-hover:border-fls-red group-hover:bg-fls-red/10 transition-all duration-300"></div>
-            <i class="fas fa-truck text-fls-red text-2xl relative z-10"></i>
-          </div>
-          <h3 class="font-display font-bold text-white text-xl uppercase tracking-widest mb-3">Terrestre</h3>
-          <div class="w-8 h-px bg-fls-red mb-4 group-hover:w-16 transition-all duration-300"></div>
-          <p class="text-white text-sm leading-relaxed">Transporte local e internacional con disponibilidad 24 horas y escoltas.</p>
-        </div>
-
-      </div>
-    </div>
-    <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
-  </section>
-
-  <!-- ========== SERVICIOS ========== -->
-  <section id="servicios" class="py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6">
-
-      <div class="text-center mb-16 scroll-reveal">
-        <p class="text-fls-red font-display font-semibold uppercase tracking-widest text-sm mb-2">Lo que hacemos</p>
-        <h2 class="font-display font-black text-fls-navy text-4xl md:text-5xl uppercase">Nuestros Servicios</h2>
-        <p class="text-gray-500 mt-4 max-w-xl mx-auto">Manejamos tu carga desde el origen hasta el destino final con soluciones integrales a tu medida.</p>
+        <h3 class="font-display font-bold text-white text-xl uppercase tracking-widest mb-3">Marítimo</h3>
+        <div class="w-8 h-px bg-fls-red mb-4 group-hover:w-16 transition-all duration-300"></div>
+        <p class="text-gray-400 text-sm leading-relaxed">Importación y exportación vía marítima. Carga FCL/LCL, consolidación y más.</p>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-0 mb-0 border-b border-gray-200">
-        <button onclick="showService(0)" id="tab-0"
-          class="service-tab active-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-fls-red text-fls-red transition-all duration-300">
-          Gestión Aduanal
-        </button>
-        <button onclick="showService(1)" id="tab-1"
-          class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
-          T. Internacional
-        </button>
-        <button onclick="showService(2)" id="tab-2"
-          class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
-          T. Terrestre
-        </button>
-        <button onclick="showService(3)" id="tab-3"
-          class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
-          Importación
-        </button>
-        <button onclick="showService(4)" id="tab-4"
-          class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
-          Exportación
-        </button>
+      <!-- Aéreo -->
+      <div class="scroll-reveal group relative flex flex-col items-center text-center px-10 py-8 md:border-r border-white/10 cursor-default">
+        <span class="absolute top-4 left-6 font-display font-black text-8xl text-white/5 select-none">02</span>
+        <div class="relative w-16 h-16 flex items-center justify-center mb-5">
+          <div class="absolute inset-0 border border-fls-red/40 group-hover:border-fls-red group-hover:bg-fls-red/10 transition-all duration-300"></div>
+          <i class="fas fa-plane text-fls-red text-2xl relative z-10"></i>
+        </div>
+        <h3 class="font-display font-bold text-white text-xl uppercase tracking-widest mb-3">Aéreo</h3>
+        <div class="w-8 h-px bg-fls-red mb-4 group-hover:w-16 transition-all duration-300"></div>
+        <p class="text-gray-400 text-sm leading-relaxed">Flete aéreo, charters y servicio puerta a puerta para tu carga internacional.</p>
       </div>
 
-      <!-- 0: Gestión Aduanal -->
-      <div id="panel-0" class="service-panel pt-12">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-file-alt text-white text-2xl"></i>
-              </div>
-              <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Gestión Aduanal</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              Nos encargamos de realizar y gestionar todos los procesos necesarios para la nacionalización de su carga de acuerdo con las regulaciones internacionales y nacionales existentes. Cada transacción posee requerimientos específicos basados en el cumplimiento de lo establecido por las leyes y la naturaleza del producto.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Asesorías Logísticas Nacional e Internacional</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Permisos VUCE</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Exoneraciones</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Licencias de Importación</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Operaciones Portuarias</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Almacenamiento</li>
-            </ul>
-            <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
-              Solicitar Cotización <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <img src="assets/img/servicios/aduanal-1.jpg" alt="Gestión Aduanal" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/aduanal-2.jpg" alt="Gestión Aduanal" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/aduanal-3.jpg" alt="Gestión Aduanal" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-          </div>
+      <!-- Terrestre -->
+      <div class="scroll-reveal group relative flex flex-col items-center text-center px-10 py-8 cursor-default">
+        <span class="absolute top-4 left-6 font-display font-black text-8xl text-white/5 select-none">03</span>
+        <div class="relative w-16 h-16 flex items-center justify-center mb-5">
+          <div class="absolute inset-0 border border-fls-red/40 group-hover:border-fls-red group-hover:bg-fls-red/10 transition-all duration-300"></div>
+          <i class="fas fa-truck text-fls-red text-2xl relative z-10"></i>
         </div>
-      </div>
-
-      <!-- 1: Transporte Internacional -->
-      <div id="panel-1" class="service-panel hidden pt-12">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-globe-americas text-white text-2xl"></i>
-              </div>
-              <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Transporte Internacional</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              Ofrecemos soluciones completas de transporte internacional tanto aéreo como marítimo. Nuestro equipo gestiona cada detalle del proceso logístico para garantizar que su carga llegue en tiempo y forma, cumpliendo con todas las regulaciones de comercio exterior.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Flete Aéreo / Marítimo</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Carga Consolidada LCL</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Cargas Completas FCL</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Importación y Exportación</li>
-            </ul>
-            <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
-              Solicitar Cotización <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <img src="assets/img/servicios/internacional-1.jpg" alt="Transporte Internacional" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/internacional-2.jpg" alt="Transporte Internacional" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/internacional-3.jpg" alt="Transporte Internacional" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-          </div>
-        </div>
-      </div>
-
-      <!-- 2: Transporte Terrestre -->
-      <div id="panel-2" class="service-panel hidden pt-12">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-truck-moving text-white text-2xl"></i>
-              </div>
-              <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Transporte Terrestre</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              Ofrecemos transporte terrestre para cualquier tipo de mercancía, desde carga regular hasta cargas peligrosas y sobredimensionadas. Contamos con disponibilidad 24 horas y un equipo especializado para garantizar la entrega segura de su carga.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Cargas FCL/LCL Peligrosas y Regulares</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Sobredimensionadas</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Disponibilidad 24 Horas</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Evaluación de Rutas</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Servicios de Escoltas</li>
-            </ul>
-            <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
-              Solicitar Cotización <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <img src="assets/img/servicios/terrestre-1.jpg" alt="Transporte Terrestre" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/terrestre-2.jpg" alt="Transporte Terrestre" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/terrestre-3.jpg" alt="Transporte Terrestre" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-          </div>
-        </div>
-      </div>
-
-      <!-- 3: Importación -->
-      <div id="panel-3" class="service-panel hidden pt-12">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-plane-arrival text-white text-2xl"></i>
-              </div>
-              <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Importación Aérea y Marítima</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              Llevamos adelante todos los servicios de importación tanto vía aérea como marítima. Manejamos productos, maquinarias, equipos o bienes hacia la República Dominicana cumpliendo con los requerimientos específicos de cada transacción.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Consolidación</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Charters Aéreo</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Servicio Puerta a Puerta</li>
-            </ul>
-            <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
-              Solicitar Cotización <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <img src="assets/img/servicios/importacion-1.jpg" alt="Importación" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/importacion-2.jpg" alt="Importación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/importacion-3.jpg" alt="Importación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Exportación -->
-      <div id="panel-4" class="service-panel hidden pt-12">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-plane-departure text-white text-2xl"></i>
-              </div>
-              <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Exportación Aérea y Marítima</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              Gestionamos eficientemente sus exportaciones para abrir nuevas oportunidades de mercado y fortalecer sus relaciones comerciales internacionales. Nuestro equipo brinda un servicio personalizado, cumpliendo con todos los requerimientos legales y de la naturaleza del producto.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Consolidación</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Charters Aéreo</li>
-              <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Servicio Puerta a Puerta</li>
-            </ul>
-            <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
-              Solicitar Cotización <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <img src="assets/img/servicios/exportacion-1.jpg" alt="Exportación" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/exportacion-2.jpg" alt="Exportación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-            <img src="assets/img/servicios/exportacion-3.jpg" alt="Exportación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-          </div>
-        </div>
+        <h3 class="font-display font-bold text-white text-xl uppercase tracking-widest mb-3">Terrestre</h3>
+        <div class="w-8 h-px bg-fls-red mb-4 group-hover:w-16 transition-all duration-300"></div>
+        <p class="text-gray-400 text-sm leading-relaxed">Transporte local e internacional con disponibilidad 24 horas y escoltas.</p>
       </div>
 
     </div>
-  </section>
-
-  <!-- ========== LIGHTBOX ========== -->
-  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center px-4" onclick="closeLightbox()">
-    <button class="absolute top-6 right-6 text-white text-3xl hover:text-fls-red transition-colors" onclick="closeLightbox()">
-      <i class="fas fa-times"></i>
-    </button>
-    <img id="lightbox-img" src="" alt="Imagen ampliada" class="max-w-4xl max-h-screen w-full object-contain" onclick="event.stopPropagation()" />
   </div>
 
+  <!-- Línea decorativa inferior -->
+  <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
+
+</section>
+
+<!-- ========== SERVICIOS ========== -->
+<section id="servicios" class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Encabezado -->
+    <div class="text-center mb-16 scroll-reveal">
+      <p class="text-fls-red font-display font-semibold uppercase tracking-widest text-sm mb-2">Lo que hacemos</p>
+      <h2 class="font-display font-black text-fls-navy text-4xl md:text-5xl uppercase">Nuestros Servicios</h2>
+      <p class="text-gray-500 mt-4 max-w-xl mx-auto">Manejamos tu carga desde el origen hasta el destino final con soluciones integrales a tu medida.</p>
+    </div>
+
+    <!-- TABS -->
+    <div class="flex flex-wrap justify-center gap-0 mb-0 border-b border-gray-200">
+      <button onclick="showService(0)" id="tab-0"
+        class="service-tab active-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-fls-red text-fls-red transition-all duration-300">
+        Gestión Aduanal
+      </button>
+      <button onclick="showService(1)" id="tab-1"
+        class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
+        T. Internacional
+      </button>
+      <button onclick="showService(2)" id="tab-2"
+        class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
+        T. Terrestre
+      </button>
+      <button onclick="showService(3)" id="tab-3"
+        class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
+        Importación
+      </button>
+      <button onclick="showService(4)" id="tab-4"
+        class="service-tab font-display font-bold uppercase tracking-wider text-sm px-6 py-4 border-b-2 border-transparent text-gray-500 hover:text-fls-navy transition-all duration-300">
+        Exportación
+      </button>
+    </div>
+
+    <!-- PANELES DE SERVICIOS -->
+
+    <!-- 0: Gestión Aduanal -->
+    <div id="panel-0" class="service-panel pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-file-alt text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Gestión Aduanal</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Nos encargamos de realizar y gestionar todos los procesos necesarios para la nacionalización de su carga de acuerdo con las regulaciones internacionales y nacionales existentes. Cada transacción posee requerimientos específicos basados en el cumplimiento de lo establecido por las leyes y la naturaleza del producto.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Asesorías Logísticas Nacional e Internacional</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Permisos VUCE</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Exoneraciones</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Licencias de Importación</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Operaciones Portuarias</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Almacenamiento</li>
+          </ul>
+          <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
+            Solicitar Cotización <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <!-- Galería -->
+        <div class="grid grid-cols-2 gap-3">
+          <img src="assets/img/servicios/aduanal-1.jpg" alt="Gestión Aduanal" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/aduanal-2.jpg" alt="Gestión Aduanal" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/aduanal-3.jpg" alt="Gestión Aduanal" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 1: Transporte Internacional -->
+    <div id="panel-1" class="service-panel hidden pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-globe-americas text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Transporte Internacional</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Ofrecemos soluciones completas de transporte internacional tanto aéreo como marítimo. Nuestro equipo gestiona cada detalle del proceso logístico para garantizar que su carga llegue en tiempo y forma, cumpliendo con todas las regulaciones de comercio exterior.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Flete Aéreo / Marítimo</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Carga Consolidada LCL</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Cargas Completas FCL</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Importación y Exportación</li>
+          </ul>
+          <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
+            Solicitar Cotización <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <img src="assets/img/servicios/internacional-1.jpg" alt="Transporte Internacional" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/internacional-2.jpg" alt="Transporte Internacional" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/internacional-3.jpg" alt="Transporte Internacional" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: Transporte Terrestre -->
+    <div id="panel-2" class="service-panel hidden pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-truck-moving text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Transporte Terrestre</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Ofrecemos transporte terrestre para cualquier tipo de mercancía, desde carga regular hasta cargas peligrosas y sobredimensionadas. Contamos con disponibilidad 24 horas y un equipo especializado para garantizar la entrega segura de su carga.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Cargas FCL/LCL Peligrosas y Regulares</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Sobredimensionadas</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Disponibilidad 24 Horas</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Evaluación de Rutas</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Servicios de Escoltas</li>
+          </ul>
+          <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
+            Solicitar Cotización <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <img src="assets/img/servicios/terrestre-1.jpg" alt="Transporte Terrestre" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/terrestre-2.jpg" alt="Transporte Terrestre" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/terrestre-3.jpg" alt="Transporte Terrestre" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: Importación -->
+    <div id="panel-3" class="service-panel hidden pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-plane-arrival text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Importación Aérea y Marítima</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Llevamos adelante todos los servicios de importación tanto vía aérea como marítima. Manejamos productos, maquinarias, equipos o bienes hacia la República Dominicana cumpliendo con los requerimientos específicos de cada transacción.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Consolidación</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Charters Aéreo</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Servicio Puerta a Puerta</li>
+          </ul>
+          <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
+            Solicitar Cotización <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <img src="assets/img/servicios/importacion-1.jpg" alt="Importación" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/importacion-2.jpg" alt="Importación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/importacion-3.jpg" alt="Importación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: Exportación -->
+    <div id="panel-4" class="service-panel hidden pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-fls-red flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-plane-departure text-white text-2xl"></i>
+            </div>
+            <h3 class="font-display font-black text-fls-navy text-3xl uppercase">Exportación Aérea y Marítima</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Gestionamos eficientemente sus exportaciones para abrir nuevas oportunidades de mercado y fortalecer sus relaciones comerciales internacionales. Nuestro equipo brinda un servicio personalizado, cumpliendo con todos los requerimientos legales y de la naturaleza del producto.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Consolidación</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Charters Aéreo</li>
+            <li class="flex items-center gap-3 text-gray-700 text-sm"><span class="w-2 h-2 bg-fls-red flex-shrink-0"></span> Servicio Puerta a Puerta</li>
+          </ul>
+          <a href="#contacto" class="inline-flex items-center gap-2 mt-8 bg-fls-red text-white px-6 py-3 font-display font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
+            Solicitar Cotización <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <img src="assets/img/servicios/exportacion-1.jpg" alt="Exportación" class="w-full h-48 object-cover col-span-2 cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/exportacion-2.jpg" alt="Exportación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+          <img src="assets/img/servicios/exportacion-3.jpg" alt="Exportación" class="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== LIGHTBOX ========== -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center px-4" onclick="closeLightbox()">
+  <button class="absolute top-6 right-6 text-white text-3xl hover:text-fls-red transition-colors" onclick="closeLightbox()">
+    <i class="fas fa-times"></i>
+  </button>
+  <img id="lightbox-img" src="" alt="Imagen ampliada" class="max-w-4xl max-h-screen w-full object-contain" onclick="event.stopPropagation()" />
+</div>
   <!-- ========== QUIÉNES SOMOS ========== -->
   <section id="nosotros" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="relative scroll-reveal">
-          <img src="assets/img/FONDO_TRANSPARENTE.png" alt="Feliz Logistics Solutions" class="w-full h-96 object-cover" />
+          <img src="assets/img/LOGO_FONDO_TRANSPARENTE.svg" alt="Feliz Logistics Solutions" class="w-full h-auto object-contain max-h-80" />
           <div class="absolute -bottom-6 -right-6 bg-fls-red text-white p-8 hidden md:block">
             <p class="font-display font-black text-5xl">FLS</p>
             <p class="font-display font-semibold text-xs uppercase tracking-widest">Gestores Aduanales</p>
@@ -375,20 +392,20 @@
   </section>
 
   <!-- ========== MISIÓN / VISIÓN ========== -->
-  <section class="py-24 bg-fls-red">
+  <section class="py-24 bg-fls-navy">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="border-l-4 border-fls-red pl-8 scroll-reveal">
           <p class="text-fls-red font-display font-semibold uppercase tracking-widest text-sm mb-3">Nuestra</p>
           <h3 class="font-display font-black text-white text-3xl uppercase mb-5">Misión</h3>
-          <p class="text-white leading-relaxed">
+          <p class="text-gray-300 leading-relaxed">
             Brindar soluciones logísticas integrales que satisfagan las necesidades del cliente.
           </p>
         </div>
         <div class="border-l-4 border-fls-red pl-8 scroll-reveal">
           <p class="text-fls-red font-display font-semibold uppercase tracking-widest text-sm mb-3">Nuestra</p>
           <h3 class="font-display font-black text-white text-3xl uppercase mb-5">Visión</h3>
-          <p class="text-white leading-relaxed">
+          <p class="text-gray-300 leading-relaxed">
             Convertirnos en la agencia de aduanas más moderna y ágil de la República Dominicana con soluciones tecnológicas de comercio exterior para satisfacer la demanda del mercado contribuyendo con el éxito de nuestros clientes.
           </p>
         </div>
@@ -397,96 +414,114 @@
   </section>
 
   <!-- ========== VALORES ========== -->
-  <section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <div class="scroll-reveal">
-        <p class="text-fls-red font-display font-semibold uppercase tracking-widest text-sm mb-2">Lo que nos define</p>
-        <h2 class="font-display font-black text-fls-navy text-4xl md:text-5xl uppercase mb-4">Nuestros Valores</h2>
-        <p class="text-gray-500 mb-14">Nuestros valores se definen con una palabra:</p>
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-shield-alt text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Confiables</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-tasks text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Organizado</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-fist-raised text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Fortaleza</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-bullseye text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Acertado</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-handshake text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Lealtad</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-heart text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Sinceridad</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-lightbulb text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Novedoso</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-thumbs-up text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Bueno</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-medal text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Compromiso</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-bolt text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Eficientes</p>
-        </div>
-        <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-          <i class="fas fa-balance-scale text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
-          <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Integridad</p>
-        </div>
-      </div>
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <div class="scroll-reveal">
+      <p class="text-fls-red font-display font-semibold uppercase tracking-widest text-sm mb-2">Lo que nos define</p>
+      <h2 class="font-display font-black text-fls-navy text-4xl md:text-5xl uppercase mb-4">Nuestros Valores</h2>
+      <p class="text-gray-500 mb-14">Nuestros valores se definen con una palabra:</p>
     </div>
-  </section>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
 
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-shield-alt text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Confiables</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-tasks text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Organizado</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-fist-raised text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Fortaleza</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-bullseye text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Acertado</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-handshake text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Lealtad</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-heart text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Sinceridad</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-lightbulb text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Novedoso</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-thumbs-up text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Bueno</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-medal text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Compromiso</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-bolt text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Eficientes</p>
+      </div>
+
+      <div class="group border border-gray-100 p-6 hover:border-fls-red hover:shadow-md hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+        <i class="fas fa-balance-scale text-fls-red text-2xl mb-3 block group-hover:scale-110 transition-transform duration-300"></i>
+        <p class="font-display font-bold text-fls-navy uppercase tracking-wider">Integridad</p>
+      </div>
+
+    </div>
+  </div>
+</section>
   <!-- ========== CONTADORES ========== -->
-  <section class="bg-fls-red relative overflow-hidden">
-    <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
-      <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 32px 32px;"></div>
-      <div class="relative grid grid-cols-2 md:grid-cols-4 gap-0 text-white">
-        <div class="scroll-reveal flex flex-col items-center px-8 py-6 border-r border-white/10">
-          <p class="font-display font-black text-6xl md:text-7xl leading-none counter" data-target="10">0</p>
-          <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">+</span>
-          <div class="w-6 h-px bg-fls-red mb-3"></div>
-          <p class="font-display font-semibold uppercase tracking-widest text-xs text-white text-center">Años de<br/>Experiencia</p>
-        </div>
-        <div class="scroll-reveal flex flex-col items-center px-8 py-6 border-r border-white/10">
-          <p class="font-display font-black text-6xl md:text-7xl leading-none counter" data-target="500">0</p>
-          <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">+</span>
-          <div class="w-6 h-px bg-fls-red mb-3"></div>
-          <p class="font-display font-semibold uppercase tracking-widest text-xs text-white text-center">Clientes<br/>Satisfechos</p>
-        </div>
-        <div class="scroll-reveal flex flex-col items-center px-8 py-6 border-r border-white/10">
-          <p class="font-display font-black text-6xl md:text-7xl leading-none counter" data-target="5">0</p>
-          <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">+</span>
-          <div class="w-6 h-px bg-fls-red mb-3"></div>
-          <p class="font-display font-semibold uppercase tracking-widest text-xs text-white text-center">Servicios<br/>Integrales</p>
-        </div>
-        <div class="scroll-reveal flex flex-col items-center px-8 py-6">
-          <p class="font-display font-black text-6xl md:text-7xl leading-none">24</p>
-          <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">h</span>
-          <div class="w-6 h-px bg-fls-red mb-3"></div>
-          <p class="font-display font-semibold uppercase tracking-widest text-xs text-white text-center">Disponibilidad<br/>Total</p>
-        </div>
-      </div>
-    </div>
-    <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
-  </section>
+<section class="bg-fls-navy relative overflow-hidden">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
+    <div class="absolute inset-0 opacity-5" style="
+      background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+      background-size: 32px 32px;
+    "></div>
+    <div class="relative grid grid-cols-2 md:grid-cols-4 gap-0 text-white">
 
+      <div class="scroll-reveal flex flex-col items-center px-8 py-6 border-r border-white/10">
+        <p class="font-display font-black text-6xl md:text-7xl leading-none counter" data-target="10">0</p>
+        <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">+</span>
+        <div class="w-6 h-px bg-fls-red mb-3"></div>
+        <p class="font-display font-semibold uppercase tracking-widest text-xs text-gray-400 text-center">Años de<br/>Experiencia</p>
+      </div>
+
+      <div class="scroll-reveal flex flex-col items-center px-8 py-6 border-r border-white/10">
+        <p class="font-display font-black text-6xl md:text-7xl leading-none counter" data-target="500">0</p>
+        <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">+</span>
+        <div class="w-6 h-px bg-fls-red mb-3"></div>
+        <p class="font-display font-semibold uppercase tracking-widest text-xs text-gray-400 text-center">Clientes<br/>Satisfechos</p>
+      </div>
+
+      <div class="scroll-reveal flex flex-col items-center px-8 py-6 border-r border-white/10">
+        <p class="font-display font-black text-6xl md:text-7xl leading-none counter" data-target="5">0</p>
+        <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">+</span>
+        <div class="w-6 h-px bg-fls-red mb-3"></div>
+        <p class="font-display font-semibold uppercase tracking-widest text-xs text-gray-400 text-center">Servicios<br/>Integrales</p>
+      </div>
+
+      <div class="scroll-reveal flex flex-col items-center px-8 py-6">
+        <p class="font-display font-black text-6xl md:text-7xl leading-none">24</p>
+        <span class="text-fls-red font-display font-black text-2xl leading-none mb-3">h</span>
+        <div class="w-6 h-px bg-fls-red mb-3"></div>
+        <p class="font-display font-semibold uppercase tracking-widest text-xs text-gray-400 text-center">Disponibilidad<br/>Total</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
+</section>
   <!-- ========== CONTACTO ========== -->
   <section id="contacto" class="py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
@@ -535,59 +570,63 @@
           </div>
         </div>
 
-        <!-- CAMBIO 5: Formulario — sin action/method, manejado por EmailJS en main.js -->
+        <!-- Formulario -->
         <div class="bg-white p-8 shadow-sm scroll-reveal">
-          <form id="contact-form" novalidate>
-            <div class="mb-5">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Nombre</label>
-              <input id="form-nombre" type="text" name="nombre" required placeholder="Tu nombre completo"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
-            </div>
-            <div class="mb-5">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Correo</label>
-              <input id="form-correo" type="email" name="correo" required placeholder="tucorreo@email.com"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
-            </div>
-            <div class="mb-5">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Teléfono</label>
-              <input id="form-telefono" type="tel" name="telefono" placeholder="809-000-0000"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
-            </div>
-            <div class="mb-6">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Mensaje</label>
-              <textarea id="form-mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors resize-none"></textarea>
-            </div>
-
-            <!-- Mensaje de estado (éxito / error) -->
-            <div id="form-status" class="hidden mb-4 px-4 py-3 text-sm font-display font-semibold uppercase tracking-wider"></div>
-
-            <button id="form-btn" type="submit" class="w-full bg-fls-red text-white py-4 font-display font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
-              <span id="btn-text">Enviar Mensaje</span>
-              <i id="btn-icon" class="fas fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
+  <form id="contact-form" novalidate>
+    <div class="mb-5">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Nombre</label>
+      <input id="form-nombre" type="text" name="nombre" required placeholder="Tu nombre completo"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
     </div>
-
-    <!-- MAPA -->
-    <div class="w-full" style="height: 420px;">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2!2d-69.9227285!3d18.4866939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89bd6d7cbbcf%3A0x14c9b6219cbbc08!2sFLS%20FELIZ%20LOGISTICS%20SOLUTIONS!5e0!3m2!1ses!2sdo!4v1709700000000!5m2!1ses!2sdo"
-        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" title="Ubicación Feliz Logistics Solutions">
-      </iframe>
+    <div class="mb-5">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Correo</label>
+      <input id="form-correo" type="email" name="correo" required placeholder="tucorreo@email.com"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
     </div>
+    <div class="mb-5">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Teléfono</label>
+      <input id="form-telefono" type="tel" name="telefono" placeholder="809-000-0000"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
+    </div>
+    <div class="mb-6">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Mensaje</label>
+      <textarea id="form-mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors resize-none"></textarea>
+    </div>
+    <div id="form-status" class="hidden mb-4 px-4 py-3 text-sm font-display font-semibold uppercase tracking-wider"></div>
+    <button id="form-btn" type="submit" class="w-full bg-fls-red text-white py-4 font-display font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
+      <span id="btn-text">Enviar Mensaje</span>
+      <i id="btn-icon" class="fas fa-paper-plane"></i>
+    </button>
+  </form> 
+</div>
+</div>
+</div>
+</section>
+
+  <!-- MAPA — fuera de la section, ancho real 100% -->
+  <div style="height: 420px; width: 100%;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2!2d-69.9227285!3d18.4866939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89bd6d7cbbcf%3A0x14c9b6219cbbc08!2sFLS%20FELIZ%20LOGISTICS%20SOLUTIONS!5e0!3m2!1ses!2sdo!4v1709700000000!5m2!1ses!2sdo"
+      width="100%" height="100%" style="border:0;"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación Feliz Logistics Solutions">
+    </iframe>
+  </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+<!-- ========== FOOTER ========== -->
 <footer class="bg-fls-navy">
+
   <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
+
   <div class="max-w-7xl mx-auto px-6 py-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
+
+      <!-- Logo + descripción -->
       <div class="md:col-span-2">
-        <img src="assets/img/LOGO_FONDO_TRANSPARENTE.svg" alt="FLS" class="h-28 w-auto mb-5" />
+        <img src="assets/img/FONDO_TRANSPARENTE_LETRAS_BLANCAS.svg" alt="FLS" class="h-19 w-auto mb-8" />
         <p class="text-white text-sm leading-relaxed max-w-sm">
           Soluciones logísticas integrales para importación, exportación y gestión aduanal desde y hacia República Dominicana.
         </p>
@@ -602,26 +641,35 @@
           </a>
         </div>
       </div>
+
+      <!-- Contacto -->
       <div>
-        <p class="font-display font-bold text-white uppercase tracking-widest text-xs mb-5 pb-3 border-b border-white/10">Contáctanos</p>
+        <p class="font-display font-bold text-white uppercase tracking-widest text-xs mb-5 pb-3 border-b border-white/10">
+          Contáctanos
+        </p>
         <ul class="space-y-4 text-white text-sm">
           <li class="flex items-start gap-3">
-            <i class="fas fa-map-marker-alt text-white mt-0.5 flex-shrink-0"></i>
+            <i class="fas fa-map-marker-alt text-fls-red mt-0.5 flex-shrink-0"></i>
             <span>Calle Francisco Villa Espez, #234, ENS. La Fe</span>
           </li>
           <li class="flex items-center gap-3">
-            <i class="fas fa-phone text-white flex-shrink-0"></i>
+            <i class="fas fa-phone text-fls-red flex-shrink-0"></i>
             <a href="tel:8498821809" class="hover:text-fls-red transition-colors">849-882-1809</a>
           </li>
           <li class="flex items-center gap-3">
-            <i class="fas fa-envelope text-white flex-shrink-0"></i>
+            <i class="fas fa-envelope text-fls-red flex-shrink-0"></i>
             <a href="mailto:venta@felizlogistics.com" class="hover:text-fls-red transition-colors break-all">venta@felizlogistics.com</a>
           </li>
         </ul>
       </div>
+
     </div>
-    <div class="border-t border-white/10 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-white text-xs">&copy; 2026 Feliz Logistics Solutions SRL. Todos los derechos reservados.</p>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-white text-xs">
+        &copy; 2026 Feliz Logistics Solutions SRL. Todos los derechos reservados.
+      </p>
       <a href="#inicio"
         class="w-9 h-9 border border-white/10 flex items-center justify-center text-white hover:border-fls-red hover:text-fls-red transition-all duration-300"
         title="Volver arriba">
@@ -629,8 +677,9 @@
       </a>
     </div>
   </div>
-</footer>
 
+</footer>
+  <!-- Leaflet JS -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
