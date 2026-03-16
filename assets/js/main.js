@@ -2,7 +2,9 @@
 // FLS — main.js
 // Yeliana DEV
 // =====================
-
+const EMAILJS_SERVICE_ID = "service_je0fy0q";
+const EMAILJS_TEMPLATE_ID = "template_ly6lk3s";
+const EMAILJS_PUBLIC_KEY = "t6vjndaEsedQHqBJ2";
 // ── 1. NAVBAR scroll effect ──────────────────────────
 const navbar = document.getElementById("navbar");
 const navLogo = document.getElementById("nav-logo");
@@ -129,4 +131,85 @@ function closeLightbox() {
   lb.classList.add("hidden");
   lb.classList.remove("flex");
   document.body.style.overflow = "";
+}
+// ── 8. EMAILJS — Inicialización ──────────────────────
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
+// ── 9. FORMULARIO ────────────────────────────────────
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+const formBtn = document.getElementById("form-btn");
+const btnText = document.getElementById("btn-text");
+const btnIcon = document.getElementById("btn-icon");
+
+function setFormStatus(type, message) {
+  formStatus.textContent = message;
+  formStatus.className = "";
+  formStatus.classList.add(
+    "mb-4",
+    "px-4",
+    "py-3",
+    "text-sm",
+    "font-display",
+    "font-semibold",
+    "uppercase",
+    "tracking-wider",
+    type,
+  );
+  formStatus.classList.remove("hidden");
+  setTimeout(() => formStatus.classList.add("hidden"), 6000);
+}
+
+function setButtonLoading(loading) {
+  if (loading) {
+    formBtn.disabled = true;
+    btnText.textContent = "Enviando...";
+    btnIcon.className = "fas fa-spinner fa-spin";
+  } else {
+    formBtn.disabled = false;
+    btnText.textContent = "Enviar Mensaje";
+    btnIcon.className = "fas fa-paper-plane";
+  }
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("form-nombre").value.trim();
+    const correo = document.getElementById("form-correo").value.trim();
+    const telefono = document.getElementById("form-telefono").value.trim();
+    const mensaje = document.getElementById("form-mensaje").value.trim();
+
+    if (!nombre || !correo || !mensaje) {
+      setFormStatus("error", "Por favor completa los campos obligatorios.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(correo)) {
+      setFormStatus("error", "Por favor ingresa un correo electrónico válido.");
+      return;
+    }
+
+    setButtonLoading(true);
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: nombre,
+        from_email: correo,
+        phone: telefono || "No proporcionado",
+        message: mensaje,
+      })
+      .then(() => {
+        setButtonLoading(false);
+        setFormStatus("success", "✓ Mensaje enviado. Le contactaremos pronto.");
+        contactForm.reset();
+      })
+      .catch((error) => {
+        setButtonLoading(false);
+        console.error("EmailJS error:", error);
+        setFormStatus("error", "Error al enviar. Contáctenos por WhatsApp.");
+      });
+  });
 }

@@ -4,12 +4,12 @@
    ===================== */
 
 :root {
-  --red: #FE3742;
+  --red: #fe3742;
   --navy-blue: #012355;
   --mid-blue: #025296;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --black: #010101;
-  --gray: #AEB5BB;
+  --gray: #aeb5bb;
 }
 
 html {
@@ -22,9 +22,15 @@ html {
   transform: translateY(30px);
   animation: fadeUp 0.8s ease forwards;
 }
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
 
 @keyframes fadeUp {
   to {
@@ -37,7 +43,9 @@ html {
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .scroll-reveal.revealed {
@@ -47,12 +55,61 @@ html {
 
 /* ── Leaflet popup font ── */
 .leaflet-popup-content {
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   margin: 12px 16px;
 }
 body {
   margin: 0;
   padding: 0;
+  /* Usa la imagen del hero como fondo general del sitio */
+  background-image: url("../img/fondo_logistica.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* Tipografía body */
+body,
+.font-body {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
+/* Tipografía display (headings, nav, labels, botones) */
+.font-display,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif !important;
+}
+/* Secciones blancas → semi-transparentes para que la foto se filtre */
+section.bg-white {
+  background-color: rgba(255, 255, 255, 0.964) !important;
+}
+
+section.bg-gray-50 {
+  background-color: rgba(249, 250, 251, 0.933) !important;
+}
+section.bg-fls-navy {
+  background-color: rgba(1, 35, 85, 0.836) !important;
+}
+/* El footer también queda opaco (sección dark, no necesita overlay) */
+footer.bg-fls-navy {
+  background-color: rgba(1, 35, 85, 0.645) !important;
+}
+
+#form-status.success {
+  background-color: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.4);
+  color: #15803d;
+}
+
+#form-status.error {
+  background-color: rgba(254, 55, 66, 0.08);
+  border: 1px solid rgba(254, 55, 66, 0.35);
+  color: #b91c1c;
 }
 
 footer {

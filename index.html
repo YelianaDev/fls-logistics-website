@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Feliz Logistics Solutions — Soluciones logísticas integrales para importación, exportación y gestión aduanal desde y hacia República Dominicana." />
   <title>Feliz Logistics Solutions | Gestores Aduanales</title>
+  <link rel="shortcut icon" href="/assets/img/LOGO.svg" type="image/x-icon">
 <link rel="stylesheet" href="assets/css/tailwind.css">
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/custom.css" />
+  
+  <!-- CAMBIO 5: EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 
@@ -21,11 +26,11 @@
 
   <!-- ========== NAV ========== -->
   <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
-    <nav class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-
+    <nav class="max-w-7xl mx-auto px-6 py-[14px] flex items-center justify-between">
       <!-- Logo más grande -->
-      <a href="#inicio">
-        <img src="assets/img/LOGO_FONDO_TRANSPARENTE.svg" alt="Feliz Logistics Solutions" class="h-28 w-auto transition-all duration-300" id="nav-logo" />
+        <a href="#inicio">
+        <img src="assets/img/LOGO.svg" alt="Feliz Logistics Solutions"
+          class="h-20 w-auto transition-all duration-300" id="nav-logo" />
       </a>
 
       <!-- Links + redes desktop -->
@@ -366,7 +371,7 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="relative scroll-reveal">
-          <img src="assets/img/nosotros.jpg" alt="Feliz Logistics Solutions" class="w-full h-96 object-cover" />
+          <img src="assets/img/LOGO_FONDO_TRANSPARENTE.svg" alt="Feliz Logistics Solutions" class="w-full h-96 object-cover" />
           <div class="absolute -bottom-6 -right-6 bg-fls-red text-white p-8 hidden md:block">
             <p class="font-display font-black text-5xl">FLS</p>
             <p class="font-display font-semibold text-xs uppercase tracking-widest">Gestores Aduanales</p>
@@ -567,48 +572,48 @@
 
         <!-- Formulario -->
         <div class="bg-white p-8 shadow-sm scroll-reveal">
-          <form id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
-            <div class="mb-5">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Nombre</label>
-              <input type="text" name="nombre" required placeholder="Tu nombre completo"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
-            </div>
-            <div class="mb-5">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Correo</label>
-              <input type="email" name="correo" required placeholder="tucorreo@email.com"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
-            </div>
-            <div class="mb-5">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Teléfono</label>
-              <input type="tel" name="telefono" placeholder="809-000-0000"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
-            </div>
-            <div class="mb-6">
-              <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Mensaje</label>
-              <textarea name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"
-                class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors resize-none"></textarea>
-            </div>
-            <button type="submit" class="w-full bg-fls-red text-white py-4 font-display font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all">
-              Enviar Mensaje
-            </button>
-          </form>
-        </div>
-      </div>
+  <form id="contact-form" novalidate>
+    <div class="mb-5">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Nombre</label>
+      <input id="form-nombre" type="text" name="nombre" required placeholder="Tu nombre completo"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
     </div>
-
-    <!-- MAPA LEAFLET — ancho completo -->
-    <div class="w-full" style="height: 420px;">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2!2d-69.9227285!3d18.4866939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89bd6d7cbbcf%3A0x14c9b6219cbbc08!2sFLS%20FELIZ%20LOGISTICS%20SOLUTIONS!5e0!3m2!1ses!2sdo!4v1709700000000!5m2!1ses!2sdo"
-    width="100%"
-    height="100%"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Ubicación Feliz Logistics Solutions">
-  </iframe>
+    <div class="mb-5">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Correo</label>
+      <input id="form-correo" type="email" name="correo" required placeholder="tucorreo@email.com"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
+    </div>
+    <div class="mb-5">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Teléfono</label>
+      <input id="form-telefono" type="tel" name="telefono" placeholder="809-000-0000"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors" />
+    </div>
+    <div class="mb-6">
+      <label class="block font-display font-semibold text-fls-navy uppercase tracking-wider text-xs mb-2">Mensaje</label>
+      <textarea id="form-mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"
+        class="w-full border border-gray-200 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-fls-red transition-colors resize-none"></textarea>
+    </div>
+    <div id="form-status" class="hidden mb-4 px-4 py-3 text-sm font-display font-semibold uppercase tracking-wider"></div>
+    <button id="form-btn" type="submit" class="w-full bg-fls-red text-white py-4 font-display font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
+      <span id="btn-text">Enviar Mensaje</span>
+      <i id="btn-icon" class="fas fa-paper-plane"></i>
+    </button>
+  </form> 
 </div>
+</div>
+</div>
+</section>
+
+  <!-- MAPA — fuera de la section, ancho real 100% -->
+  <div style="height: 420px; width: 100%;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2!2d-69.9227285!3d18.4866939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89bd6d7cbbcf%3A0x14c9b6219cbbc08!2sFLS%20FELIZ%20LOGISTICS%20SOLUTIONS!5e0!3m2!1ses!2sdo!4v1709700000000!5m2!1ses!2sdo"
+      width="100%" height="100%" style="border:0;"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación Feliz Logistics Solutions">
+    </iframe>
+  </div>
   </section>
 
 <!-- ========== FOOTER ========== -->
@@ -616,22 +621,22 @@
 
   <div class="w-full h-px bg-gradient-to-r from-transparent via-fls-red to-transparent"></div>
 
-  <div class="max-w-7xl mx-auto px-6 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
 
       <!-- Logo + descripción -->
       <div class="md:col-span-2">
         <img src="assets/img/LOGO_FONDO_TRANSPARENTE.svg" alt="FLS" class="h-20 w-auto mb-5" />
-        <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+        <p class="text-white text-sm leading-relaxed max-w-sm">
           Soluciones logísticas integrales para importación, exportación y gestión aduanal desde y hacia República Dominicana.
         </p>
         <div class="flex gap-4 mt-6">
           <a href="https://instagram.com/felizlogistics" target="_blank"
-            class="w-10 h-10 border border-white/10 flex items-center justify-center text-gray-400 hover:border-fls-red hover:text-fls-red transition-all duration-300">
+            class="w-10 h-10 border border-white/10 flex items-center justify-center text-white hover:border-fls-red hover:text-fls-red transition-all duration-300">
             <i class="fab fa-instagram"></i>
           </a>
           <a href="https://wa.me/18498821809" target="_blank"
-            class="w-10 h-10 border border-white/10 flex items-center justify-center text-gray-400 hover:border-fls-red hover:text-fls-red transition-all duration-300">
+            class="w-10 h-10 border border-white/10 flex items-center justify-center text-white hover:border-fls-red hover:text-fls-red transition-all duration-300">
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
@@ -642,7 +647,7 @@
         <p class="font-display font-bold text-white uppercase tracking-widest text-xs mb-5 pb-3 border-b border-white/10">
           Contáctanos
         </p>
-        <ul class="space-y-4 text-gray-400 text-sm">
+        <ul class="space-y-4 text-white text-sm">
           <li class="flex items-start gap-3">
             <i class="fas fa-map-marker-alt text-fls-red mt-0.5 flex-shrink-0"></i>
             <span>Calle Francisco Villa Espez, #234, ENS. La Fe</span>
@@ -662,11 +667,11 @@
 
     <!-- Copyright -->
     <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-gray-500 text-xs">
+      <p class="text-white text-xs">
         &copy; 2026 Feliz Logistics Solutions SRL. Todos los derechos reservados.
       </p>
       <a href="#inicio"
-        class="w-9 h-9 border border-white/10 flex items-center justify-center text-gray-500 hover:border-fls-red hover:text-fls-red transition-all duration-300"
+        class="w-9 h-9 border border-white/10 flex items-center justify-center text-white hover:border-fls-red hover:text-fls-red transition-all duration-300"
         title="Volver arriba">
         <i class="fas fa-chevron-up text-xs"></i>
       </a>
