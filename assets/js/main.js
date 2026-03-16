@@ -2,21 +2,27 @@
 // FLS — main.js
 // Yeliana DEV
 // =====================
-
+const EMAILJS_SERVICE_ID = "service_je0fy0q";
+const EMAILJS_TEMPLATE_ID = "template_ly6lk3s";
+const EMAILJS_PUBLIC_KEY = "t6vjndaEsedQHqBJ2";
 // ── 1. NAVBAR scroll effect ──────────────────────────
 const navbar = document.getElementById("navbar");
 const navLogo = document.getElementById("nav-logo");
 
+// Estado inicial del logo (antes del primer scroll)
+navLogo.style.height = "96px";
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 60) {
-    navbar.style.backgroundColor = "#012355";
+    navbar.style.backgroundColor = "rgba(146, 63, 63, 0.97)";
     navbar.style.boxShadow = "0 2px 20px rgba(0,0,0,0.4)";
-    navbar.style.paddingTop = "0";
-    navLogo.style.height = "80px";
+    navLogo.style.height = "70px";
+    navbar.classList.add("scrolled");
   } else {
     navbar.style.backgroundColor = "transparent";
     navbar.style.boxShadow = "none";
-    navLogo.style.height = "120px";
+    navLogo.style.height = "96px";
+    navbar.classList.remove("scrolled");
   }
 });
 
@@ -34,7 +40,7 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
   });
 });
 
-// ── 3. SCROLL REVEAL (elementos que aparecen) ────────
+// ── 3. SCROLL REVEAL ────────────────────────────────
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -96,26 +102,22 @@ if (counters.length > 0) {
   counterObserver.observe(counters[0].closest("section") || counters[0]);
 }
 
-// ── 7. TABS DE SERVICIOS ─────────────────────────────
+// ── 6. TABS DE SERVICIOS ─────────────────────────────
 function showService(index) {
-  // Ocultar todos los paneles
   document
     .querySelectorAll(".service-panel")
     .forEach((p) => p.classList.add("hidden"));
-  // Resetear todos los tabs
   document.querySelectorAll(".service-tab").forEach((t) => {
     t.classList.remove("border-fls-red", "text-fls-red");
     t.classList.add("border-transparent", "text-gray-500");
   });
-  // Mostrar panel activo
   document.getElementById("panel-" + index).classList.remove("hidden");
-  // Activar tab
   const activeTab = document.getElementById("tab-" + index);
   activeTab.classList.add("border-fls-red", "text-fls-red");
   activeTab.classList.remove("border-transparent", "text-gray-500");
 }
 
-// ── 8. LIGHTBOX ──────────────────────────────────────
+// ── 7. LIGHTBOX ──────────────────────────────────────
 function openLightbox(src) {
   document.getElementById("lightbox-img").src = src;
   const lb = document.getElementById("lightbox");
@@ -129,4 +131,85 @@ function closeLightbox() {
   lb.classList.add("hidden");
   lb.classList.remove("flex");
   document.body.style.overflow = "";
+}
+// ── 8. EMAILJS — Inicialización ──────────────────────
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
+// ── 9. FORMULARIO ────────────────────────────────────
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+const formBtn = document.getElementById("form-btn");
+const btnText = document.getElementById("btn-text");
+const btnIcon = document.getElementById("btn-icon");
+
+function setFormStatus(type, message) {
+  formStatus.textContent = message;
+  formStatus.className = "";
+  formStatus.classList.add(
+    "mb-4",
+    "px-4",
+    "py-3",
+    "text-sm",
+    "font-display",
+    "font-semibold",
+    "uppercase",
+    "tracking-wider",
+    type,
+  );
+  formStatus.classList.remove("hidden");
+  setTimeout(() => formStatus.classList.add("hidden"), 6000);
+}
+
+function setButtonLoading(loading) {
+  if (loading) {
+    formBtn.disabled = true;
+    btnText.textContent = "Enviando...";
+    btnIcon.className = "fas fa-spinner fa-spin";
+  } else {
+    formBtn.disabled = false;
+    btnText.textContent = "Enviar Mensaje";
+    btnIcon.className = "fas fa-paper-plane";
+  }
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("form-nombre").value.trim();
+    const correo = document.getElementById("form-correo").value.trim();
+    const telefono = document.getElementById("form-telefono").value.trim();
+    const mensaje = document.getElementById("form-mensaje").value.trim();
+
+    if (!nombre || !correo || !mensaje) {
+      setFormStatus("error", "Por favor completa los campos obligatorios.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(correo)) {
+      setFormStatus("error", "Por favor ingresa un correo electrónico válido.");
+      return;
+    }
+
+    setButtonLoading(true);
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: nombre,
+        from_email: correo,
+        phone: telefono || "No proporcionado",
+        message: mensaje,
+      })
+      .then(() => {
+        setButtonLoading(false);
+        setFormStatus("success", "✓ Mensaje enviado. Le contactaremos pronto.");
+        contactForm.reset();
+      })
+      .catch((error) => {
+        setButtonLoading(false);
+        console.error("EmailJS error:", error);
+        setFormStatus("error", "Error al enviar. Contáctenos por WhatsApp.");
+      });
+  });
 }

@@ -4,27 +4,122 @@
    ===================== */
 
 :root {
-  --red: #FE3742;
+  --red: #fe3742;
   --navy-blue: #012355;
   --mid-blue: #025296;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --black: #010101;
-  --gray: #AEB5BB;
+  --gray: #aeb5bb;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* ── Hero fade-up animations ── */
+/* ─────────────────────────────────────────────
+   CAMBIO 1: Fondo con foto de logística
+   La foto se fija en el body y las secciones
+   claras tienen un fondo blanco semi-transparente
+   al ~92%, dejando la imagen visible al ~8%.
+   Las secciones dark (bg-fls-navy) no se ven
+   afectadas porque tienen fondo sólido propio.
+───────────────────────────────────────────── */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Usa la imagen del hero como fondo general del sitio */
+  background-image: url("../img/fondo_logistica.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Secciones blancas → semi-transparentes para que la foto se filtre */
+section.bg-white {
+  background-color: rgba(255, 255, 255, 0.93) !important;
+}
+
+section.bg-gray-50 {
+  background-color: rgba(249, 250, 251, 0.93) !important;
+}
+
+/* El footer también queda opaco (sección dark, no necesita overlay) */
+footer.bg-fls-navy {
+  background-color: rgba(254, 55, 65, 0.645) !important;
+}
+
+/* ─────────────────────────────────────────────
+   CAMBIO 3: Override de tipografía
+   Se aplica sin necesidad de recompilar Tailwind.
+   Tailwind tiene font-display → Barlow Condensed
+   y font-body → Barlow. Aquí los reemplazamos
+   con Outfit (display) y DM Sans (body).
+───────────────────────────────────────────── */
+
+/* Tipografía body */
+body,
+.font-body {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
+/* Tipografía display (headings, nav, labels, botones) */
+.font-display,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif !important;
+}
+
+/* ─────────────────────────────────────────────
+   CAMBIO 4: Rojo transparente (prueba de cliente)
+   Aplica opacity a todos los elementos que usan
+   fls-red. Fácil de revertir: borrar este bloque.
+   --NOTA: Cuando el cliente confirme el color
+   definitivo, actualizar en tailwind.config.js
+   y recompilar con: npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css
+───────────────────────────────────────────── */
+
+.bg-fls-red {
+  background-color: rgba(254, 55, 66, 0.6) !important;
+}
+
+.text-fls-red {
+  color: rgba(254, 55, 66, 0.7) !important;
+}
+
+.border-fls-red {
+  border-color: rgba(254, 55, 66, 0.55) !important;
+}
+
+/* Líneas decorativas gradient */
+.bg-gradient-to-r.from-transparent.via-fls-red {
+  --tw-gradient-stops:
+    transparent, rgba(254, 55, 66, 0.6), transparent !important;
+}
+
+/* ─────────────────────────────────────────────
+   Hero fade-up animations
+───────────────────────────────────────────── */
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 0.8s ease forwards;
 }
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
 
 @keyframes fadeUp {
   to {
@@ -33,11 +128,16 @@ html {
   }
 }
 
-/* ── Scroll reveal ── */
+/* ─────────────────────────────────────────────
+   Scroll reveal
+───────────────────────────────────────────── */
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .scroll-reveal.revealed {
@@ -45,15 +145,67 @@ html {
   transform: translateY(0);
 }
 
-/* ── Leaflet popup font ── */
-.leaflet-popup-content {
-  font-family: 'Barlow', sans-serif;
-  margin: 12px 16px;
+/* ─────────────────────────────────────────────
+   Formulario — estados del botón
+───────────────────────────────────────────── */
+
+#form-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
 }
-body {
-  margin: 0;
-  padding: 0;
+
+#form-btn.sending {
+  background-color: rgba(254, 55, 66, 0.5) !important;
 }
+
+/* Estado éxito */
+#form-status.success {
+  background-color: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.4);
+  color: #15803d;
+}
+
+/* Estado error */
+#form-status.error {
+  background-color: rgba(254, 55, 66, 0.08);
+  border: 1px solid rgba(254, 55, 66, 0.35);
+  color: #b91c1c;
+}
+
+/* ─────────────────────────────────────────────
+   Secciones con fondo rojo: acentos → blanco
+   Para que íconos, líneas y bordes no queden
+   rojo sobre rojo.
+───────────────────────────────────────────── */
+
+section.bg-fls-red .text-fls-red,
+section.bg-fls-red i.text-fls-red,
+section.bg-fls-red span.text-fls-red {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+section.bg-fls-red .border-fls-red,
+section.bg-fls-red .border-fls-red\/40 {
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+section.bg-fls-red [class*="via-fls-red"] {
+  --tw-gradient-stops:
+    transparent, rgba(255, 255, 255, 0.3), transparent !important;
+}
+
+section.bg-fls-red .bg-fls-red {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+section.bg-fls-red .w-6.h-px.bg-fls-red,
+section.bg-fls-red div.w-8.h-px.bg-fls-red {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ─────────────────────────────────────────────
+   Misc
+───────────────────────────────────────────── */
 
 footer {
   margin-bottom: 0;
