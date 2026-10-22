@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
     navbar.style.boxShadow = "none";
     navLogo.style.height = "120px";
   }
-});
+}, { passive: true });
 
 // ── 2. MENÚ HAMBURGUESA ──────────────────────────────
 const menuBtn = document.getElementById("menu-btn");
