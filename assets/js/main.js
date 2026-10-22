@@ -109,8 +109,14 @@ function showService(index) {
     t.classList.remove("border-fls-red", "text-fls-red");
     t.classList.add("border-transparent", "text-gray-500");
   });
+  // Start fetching images for the selected service before revealing its panel.
+  const selectedPanel = document.getElementById("panel-" + index);
+  selectedPanel.querySelectorAll("img[data-src], img[loading='lazy']").forEach((img) => {
+    img.loading = "eager";
+    img.fetchPriority = "high";
+  });
   // Mostrar panel activo
-  document.getElementById("panel-" + index).classList.remove("hidden");
+  selectedPanel.classList.remove("hidden");
   // Activar tab
   const activeTab = document.getElementById("tab-" + index);
   activeTab.classList.add("border-fls-red", "text-fls-red");
